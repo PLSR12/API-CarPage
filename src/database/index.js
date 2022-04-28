@@ -4,10 +4,11 @@ import Car from '../app/models/Car'
 import Moto from '../app/models/Moto'
 import Truck from '../app/models/Truck'
 import Brand from '../app/models/Brands'
+import Vehicle from '../app/models/Vehicles'
 
 import configDataBase from '../config/database'
 
-const models = [Car, Moto, Truck, Brand]
+const models = [Car, Moto, Truck, Brand, Vehicle]
 
 class Database {
   constructor () {
