@@ -7,6 +7,7 @@ import CarController from './app/controllers/CarController'
 import TruckController from './app/controllers/TruckController'
 import MotoController from './app/controllers/MotoController'
 import BrandController from './app/controllers/BrandController'
+import VehicleController from './app/controllers/VehiclesController'
 
 const upload = multer(multerConfig)
 const routes = new Router()
@@ -26,5 +27,9 @@ routes.put('/motors/:id', upload.single('file'), MotoController.update)
 routes.post('/brands', upload.single('file'), BrandController.store)
 routes.get('/brands', BrandController.index)
 routes.put('/brands/:id', upload.single('file'), BrandController.update)
+
+routes.post('/vehicles', upload.single('file'), VehicleController.store)
+routes.get('/vehicles', VehicleController.index)
+routes.put('/vehicles/:id', upload.single('file'), VehicleController.update)
 
 export default routes
