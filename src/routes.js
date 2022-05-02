@@ -12,6 +12,10 @@ import VehicleController from './app/controllers/VehiclesController'
 const upload = multer(multerConfig)
 const routes = new Router()
 
+routes.get('/', (req, res) => {
+    res.status(200).json({ 'message':'Ok' })
+})
+
 routes.post('/cars', upload.single('file'), CarController.store)
 routes.get('/cars', CarController.index)
 routes.put('/cars/:id', upload.single('file'), CarController.update)
