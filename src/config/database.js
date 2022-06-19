@@ -1,4 +1,5 @@
 module.exports = {
+	dialect: 'postgres',
 	host: 'containers-us-west-71.railway.app',
 	username: 'postgres',
 	password: 'idO6SFedwjQKCnjWEJsU',
