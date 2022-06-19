@@ -9,7 +9,7 @@ class Brand extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get () {
-            return `http://localhost:3100/brands-file/${this.path}`
+            return `https://api-carpage-production.up.railway.app/brands-file/${this.path}`
           }
         }
       },

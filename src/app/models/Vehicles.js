@@ -9,7 +9,7 @@ class Vehicle extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get () {
-            return `http://localhost:3100/vehicle-file/${this.path}`
+            return `https://api-carpage-production.up.railway.app/vehicle-file/${this.path}`
           }
         }
       },
